@@ -32,7 +32,7 @@ h1 {
   font-size: 45px;
   --color1: #f2e4d1;
   --color2: #bb2528;
-  background: linear-gradient(
+  /*background: linear-gradient(
       rgba(255, 0, 0, 1) 0%,
       rgba(255, 154, 0, 1) 10%,
       rgba(208, 222, 33, 1) 20%,
@@ -44,8 +44,7 @@ h1 {
       rgba(186, 12, 248, 1) 80%,
       rgba(251, 7, 217, 1) 90%,
       rgba(255, 0, 0, 1) 100%
-    )
-    0 0/100% 200%;
+    ) 0 0/100% 200%;*/
   animation: a 2s linear infinite;
   background-clip: text;
   color: transparent;
