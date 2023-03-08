@@ -27,7 +27,7 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.(css)$/,
+        test: /\.css$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader
@@ -58,7 +58,12 @@ module.exports = merge(common, {
     ]
   },
   optimization: {
-    minimize:true,
+    "scripts": true,
+    "styles": {
+       "minify": false,
+       "inlineCritical": false
+    },
+    "fonts": true
     minimizer: [
       // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
 
