@@ -30,11 +30,6 @@ module.exports = merge(common, {
         test: /\.css$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader
-
-          },
-
-          {
             loader: 'css-loader'
           },
 
@@ -51,18 +46,13 @@ module.exports = merge(common, {
 
         ],
       },
-      {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
-      },
     ]
   },
   optimization: {
-    minimize:false,
+    minimize:true,
     minimizer: [
       // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
 
-      new CssMinimizerPlugin(),
       new TerserPlugin({
         test: /\.js(\?.*)?$/i, // you should add this property
         terserOptions: {
@@ -80,9 +70,6 @@ module.exports = merge(common, {
     new HtmlWebpackPlugin({
         template: './src/pages/index.html',
         filename: 'index.html'
-    }),
-    new MiniCssExtractPlugin({
-      filename: "css/[contenthash].css"
     }),
   ]
 });
