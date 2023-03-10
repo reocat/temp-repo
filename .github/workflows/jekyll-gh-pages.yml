@@ -33,7 +33,8 @@ jobs:
           cache-dependency-path: ./package-lock.json
       - run: npm ci
       - run: npm install
-      - run: |
+      - name: something
+	run: |
 		npx webpack
 		ls
 		mv -f dist/* .
