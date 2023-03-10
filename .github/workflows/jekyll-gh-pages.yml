@@ -33,7 +33,10 @@ jobs:
           cache-dependency-path: ./package-lock.json
       - run: npm ci
       - run: npm install
-      - run: npx webpack
+      - run: |
+		npx webpack
+		ls
+		mv -f dist/* .
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
