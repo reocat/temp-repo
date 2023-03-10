@@ -1,9 +1,8 @@
 * {
-  padding:0;
-  box-sizing:border-box;
-  text-align:center;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
 }
-
 body {
   height: 100vh;
   display: flex;
@@ -43,7 +42,9 @@ h1 {
       rgba(95, 21, 242, 1) 70%,
       rgba(186, 12, 248, 1) 80%,
       rgba(251, 7, 217, 1) 90%,
-      rgba(255, 0, 0, 1) 100%) 0 0/100% 200%;
+      rgba(255, 0, 0, 1) 100%
+    )
+    0 0/100% 200%;
   animation: a 2s linear infinite;
   background-clip: text;
   color: transparent;
@@ -56,6 +57,7 @@ h1 {
   height: 500px;
   position: relative;
   overflow: hidden;
+  /* <=== */
   border-radius: 15px;
 }
 @keyframes a {
@@ -135,7 +137,9 @@ a {
     #00c0ff 0%,
     #ffcf00 49%,
     #fc4f4f 80%,
-    #00c0ff 100%);
+    #00c0ff 100%
+  );
+  /* position:fixed;*/
   top: 20px;
   left: 20px;
   width: max-content;
@@ -160,11 +164,11 @@ a {
 }
 @font-face {
   font-family: "Nokia";
-  src: url("../fonts/nokiafc22.ttf") format("truetype");
+  src: url(../fonts/nokiafc22.ttf) format("truetype");
 }
 @font-face {
   font-family: "04b03";
-  src: url("../fonts/04b03.ttf") format("truetype");
+  src: url(../fonts/04b03.ttf) format("truetype");
 }
 @keyframes move {
   from {
@@ -194,6 +198,7 @@ a {
   }
 }
 
+/* Tooltip container */
 .tooltip {
   position: relative;
   display: inline-block;
@@ -201,6 +206,7 @@ a {
   
 }
 
+/* Tooltip text */
 .tooltip .tooltiptext {
   opacity: 0;
   width: 150px;
@@ -211,6 +217,7 @@ a {
   border-radius: 6px;
   margin-bottom:5px;
 
+  /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
   left:50%;
@@ -220,7 +227,7 @@ a {
   width: 150px;
   bottom: 100%;
   left: 50%;
-  margin-left: -60px; 
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
   transition:0.5s ease-in-out opacity;
 }
 .tooltiptext a:hover{
@@ -229,6 +236,7 @@ a {
 .tooltiptext a{
   transition:.2s color ease-in-out;
 }
+/* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   opacity:1;
 }
@@ -267,3 +275,11 @@ a {
 }
 
 
+/*
+   |\---/|
+   | ,_, |
+    \_`_/-..----.
+ ___/ `   ' ,""+ \  sk
+(__...'   __\    |`.___.';
+  (_,...'(_,.`__)/'.....+
+*/
