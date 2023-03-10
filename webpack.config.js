@@ -19,7 +19,7 @@
     ],
     output: {
      filename: '[name].[contenthash].js',
-      path: path.resolve(__dirname, '/'),
+      path: path.resolve(__dirname, './'),
       clean: true,
     },
     module: {
